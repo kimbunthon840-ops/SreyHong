@@ -21,7 +21,7 @@
 
   <!-- Top Action Controls -->
   <header class="top-bar">
-    <button class="top-control-btn" id="fullscreen-toggle" title="ពេញអេក្រង់ / ចាកចេញ" aria-label="Toggle Fullscreen">
+    <button class="top-control-btn fs-highlight" id="fullscreen-toggle" title="ពេញអេក្រង់ / ចាកចេញ" aria-label="Toggle Fullscreen">
       <span class="fs-icon">⛶</span>
       <span class="btn-text">ពេញអេក្រង់</span>
     </button>
@@ -33,9 +33,9 @@
   <main class="app-viewport">
     <div class="prank-container">
       
-      <!-- Comic Graphic ("FUCK YOU!") -->
+      <!-- Comic Graphic ("FUCK YOU!") - Bulletproof with Base64 Fallback -->
       <div class="comic-box">
-        <img src="assets/comic.png" alt="Comic Prank">
+        <img src="assets/comic.png" alt="Comic Prank" id="comic-img" onerror="this.onerror=null; this.src=window.COMIC_DATA_URI || 'comic.png';">
       </div>
 
       <!-- Khmer Text Lines -->
