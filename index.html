@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#FCEEF2">
+  <title>Document</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💕</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Background Particles -->
+  <div class="bg-particles" id="bg-particles"></div>
+
+  <!-- Top Action Controls (Fullscreen & Sound) -->
+  <header class="top-bar">
+    <button class="top-control-btn fs-highlight" id="fullscreen-toggle" title="ពេញអេក្រង់ / ចាកចេញ" aria-label="Toggle Fullscreen">
+      <span class="fs-icon">⛶</span>
+      <span class="btn-text">ពេញអេក្រង់</span>
+    </button>
+    <button class="top-control-btn icon-only" id="audio-toggle" title="បិទ/បើកសំឡេង" aria-label="Toggle Sound">
+      🔊
+    </button>
+  </header>
+
+  <main class="app-viewport">
+    
+    <!-- ================================================================
+         Screen 1: The Cute Love Card ("សូមចុចមើល 💕")
+         ================================================================ -->
+    <section class="screen active" id="screen-card">
+      <div class="cute-card">
+        
+        <!-- Corner Sticker: Top-Left (Envelope with Heart) -->
+        <div class="sticker sticker-top-left" title="💌 សំបុត្រស្នេហា">
+          <img src="assets/svg/envelope.svg" alt="Envelope" onerror="this.src='assets/envelope_clean.png'">
+        </div>
+
+        <!-- Corner Sticker: Top-Right (Teddy Bear) -->
+        <div class="sticker sticker-top-right" title="🧸 កូនខ្លាឃ្មុំ Brown">
+          <img src="assets/svg/bear.svg" alt="Cute Bear" onerror="this.src='assets/bear_clean.png'">
+        </div>
+
+        <!-- Corner Sticker: Bottom-Left (Sparkling Heart) -->
+        <div class="sticker sticker-bottom-left" title="💖 បេះដូងផ្កាយ">
+          <img src="assets/svg/heart.svg" alt="Sparkle Heart" onerror="this.src='assets/heart_clean.png'">
+        </div>
+
+        <!-- Corner Sticker: Bottom-Right (Cherry Blossom) -->
+        <div class="sticker sticker-bottom-right" title="🌸 ផ្កាសាគូរ៉ា">
+          <img src="assets/svg/flower.svg" alt="Sakura Flower" onerror="this.src='assets/flower_clean.png'">
+        </div>
+
+        <!-- Card Title -->
+        <h1 class="card-title">
+          សូមចុចមើល <span class="heart-icon">💕</span>
+        </h1>
+
+        <!-- Action Button -->
+        <button class="cute-btn" id="click-me-btn">
+          ចុចខ្ញុំ <span>🤩</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ================================================================
+         Screen 2: The Comic Surprise / Prank Screen
+         ================================================================ -->
+    <section class="screen hidden" id="screen-prank">
+      <div class="prank-container">
+        
+        <!-- Comic Book Graphic ("FUCK YOU!") -->
+        <div class="comic-box">
+          <img src="assets/comic.png" alt="Comic Prank" id="comic-img">
+        </div>
+
+        <!-- Prank Khmer Text -->
+        <div class="comic-text-area">
+          <h2 class="prank-question">ចុចមើលធ្វើអ្វី?</h2>
+          <p class="prank-love-text">💕 💕 ស្រឡាញ់ញុមមែន 🥰 🥰</p>
+        </div>
+
+        <!-- Interactive Action Buttons -->
+        <div class="prank-actions">
+          <button class="action-btn replay" id="replay-btn">
+            <span>🔄</span> ម្តងទៀត
+          </button>
+          <button class="action-btn secondary" id="share-btn">
+            <span>🔗</span> ចែករំលែក
+          </button>
+          <a href="Hlong_love.html" class="action-btn secondary" title="បើកទំព័រដាច់ដោយឡែក">
+            <span>📄</span> ទំព័រដាច់ដោយឡែក
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Application Logic -->
+  <script src="script.js"></script>
+</body>
+</html>
+
