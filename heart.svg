@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="sparkleHeart" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FF6B8B"/>
+      <stop offset="50%" stop-color="#FF2A6D"/>
+      <stop offset="100%" stop-color="#D80032"/>
+    </radialGradient>
+    <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9A6"/>
+      <stop offset="50%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA000"/>
+    </linearGradient>
+    <filter id="heartGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-color="#FF2A6D" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <g filter="url(#heartGlow)">
+    <!-- 3D Heart -->
+    <path d="M 50 32 C 50 18 30 8 18 24 C 6 38 24 62 50 78 C 76 62 94 38 82 24 C 70 8 50 18 50 32 Z" fill="url(#sparkleHeart)"/>
+    
+    <!-- Heart Gloss Highlights -->
+    <ellipse cx="32" cy="24" rx="7" ry="4" fill="#FFFFFF" opacity="0.55" transform="rotate(-35 32 24)"/>
+    <ellipse cx="68" cy="24" rx="4" ry="2.5" fill="#FFFFFF" opacity="0.35" transform="rotate(35 68 24)"/>
+    
+    <!-- Sparkle Star Large (Bottom Left) -->
+    <g transform="translate(14, 52)">
+      <path d="M 12 0 Q 12 12 24 12 Q 12 12 12 24 Q 12 12 0 12 Q 12 12 12 0 Z" fill="url(#starGrad)" filter="drop-shadow(0 0 2px #FFD700)"/>
+      <circle cx="12" cy="12" r="2.5" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- Sparkle Star Small (Top Right) -->
+    <g transform="translate(72, 12)">
+      <path d="M 7 0 Q 7 7 14 7 Q 7 7 7 14 Q 7 7 0 7 Q 7 7 7 0 Z" fill="url(#starGrad)" filter="drop-shadow(0 0 2px #FFD700)"/>
+      <circle cx="7" cy="7" r="1.5" fill="#FFFFFF"/>
+    </g>
+  </g>
+</svg>

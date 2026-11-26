@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 90" width="100" height="90">
+  <defs>
+    <linearGradient id="envGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E8E0F0"/>
+    </linearGradient>
+    <linearGradient id="envFlap" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ECE5F5"/>
+      <stop offset="100%" stop-color="#D7CCE6"/>
+    </linearGradient>
+    <radialGradient id="envHeart" cx="35%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#FF597B"/>
+      <stop offset="60%" stop-color="#FF1352"/>
+      <stop offset="100%" stop-color="#C70039"/>
+    </radialGradient>
+    <filter id="envShadow" x="-15%" y="-15%" width="130%" height="135%">
+      <feDropShadow dx="1" dy="3" stdDeviation="2.5" flood-color="#553366" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <g filter="url(#envShadow)" transform="rotate(-8 50 45)">
+    <!-- Back flap -->
+    <path d="M 12 30 L 50 15 L 88 30 Z" fill="#D2C5E3"/>
+    
+    <!-- Heart emerging -->
+    <path d="M 50 35 C 50 25 35 12 25 24 C 15 35 30 52 50 64 C 70 52 85 35 75 24 C 65 12 50 25 50 35 Z" fill="url(#envHeart)" filter="drop-shadow(0 2px 3px rgba(0,0,0,0.15))"/>
+    <ellipse cx="37" cy="24" rx="4" ry="2.5" fill="#FFA5BA" opacity="0.6" transform="rotate(-30 37 24)"/>
+
+    <!-- Envelope body -->
+    <rect x="12" y="30" width="76" height="50" rx="4" fill="url(#envGrad)" stroke="#C8B8DC" stroke-width="0.8"/>
+    
+    <!-- Envelope folds -->
+    <path d="M 12 80 L 44 48 M 88 80 L 56 48" stroke="#D1C3E2" stroke-width="1.2"/>
+    <path d="M 12 30 L 50 56 L 88 30" fill="url(#envFlap)" opacity="0.75" stroke="#C8B8DC" stroke-width="0.8"/>
+    <path d="M 12 80 L 50 52 L 88 80 Z" fill="#F4EFF8" stroke="#D7CCE6" stroke-width="0.8"/>
+  </g>
+</svg>

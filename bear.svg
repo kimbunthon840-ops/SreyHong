@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <radialGradient id="bearGrad" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#9C6644"/>
+      <stop offset="70%" stop-color="#7F4F24"/>
+      <stop offset="100%" stop-color="#582F0E"/>
+    </radialGradient>
+    <radialGradient id="earInner" cx="40%" cy="35%" r="60%">
+      <stop offset="0%" stop-color="#DDBEA9"/>
+      <stop offset="100%" stop-color="#B79477"/>
+    </radialGradient>
+    <filter id="bearShadow" x="-10%" y="-10%" width="125%" height="125%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2" flood-color="#000" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <g filter="url(#bearShadow)">
+    <!-- Ears -->
+    <circle cx="28" cy="28" r="16" fill="url(#bearGrad)"/>
+    <circle cx="28" cy="28" r="9" fill="url(#earInner)"/>
+    
+    <circle cx="72" cy="28" r="16" fill="url(#bearGrad)"/>
+    <circle cx="72" cy="28" r="9" fill="url(#earInner)"/>
+    
+    <!-- Head -->
+    <ellipse cx="50" cy="54" rx="38" ry="34" fill="url(#bearGrad)"/>
+    
+    <!-- Snout / Muzzle -->
+    <ellipse cx="50" cy="62" rx="17" ry="13" fill="#F8EDEB"/>
+    
+    <!-- Nose -->
+    <ellipse cx="50" cy="56" rx="5" ry="3.5" fill="#2B1E16"/>
+    
+    <!-- Mouth -->
+    <path d="M 50 59.5 L 50 64 Q 45 69 42 64 M 50 64 Q 55 69 58 64" fill="none" stroke="#2B1E16" stroke-width="2.2" stroke-linecap="round"/>
+    
+    <!-- Open smile tongue (optional/cute) -->
+    <path d="M 46 64.5 Q 50 69.5 54 64.5 Z" fill="#FF758F"/>
+    
+    <!-- Eyes -->
+    <ellipse cx="36" cy="48" rx="3.5" ry="4.5" fill="#2B1E16"/>
+    <ellipse cx="64" cy="48" rx="3.5" ry="4.5" fill="#2B1E16"/>
+    <circle cx="37" cy="46.5" r="1.2" fill="#FFFFFF"/>
+    <circle cx="65" cy="46.5" r="1.2" fill="#FFFFFF"/>
+  </g>
+</svg>
